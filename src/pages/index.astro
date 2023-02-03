@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Headers from '../layouts/Header.astro';
 import Info from '../layouts/Info.astro';
+import Profile from '../layouts/ProfileUser.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -12,7 +13,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Headers />
-		<Info />
+		<main>
+			<Info />
+			<Profile />
+		</main>
 		<!-- <main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -48,3 +52,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</main> -->
 	</body>
 </html>
+
+
+
+<style>
+	main{
+		margin: 0 auto;
+		width: 80vw;
+		height: 80vh;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		align-items: center;
+	}
+</style>
