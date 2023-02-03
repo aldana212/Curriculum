@@ -3,15 +3,16 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <nav class="navbar">
-	<i class='bx bx-menu'></i>
+	<i class='bx bx-menu' id="icons-menu"></i>
 	<ul class="menu">
+	<i class='bx bxs-face'></i>
 		<li><a href="">Home</a></li>
 		<li><a href="">About me</a></li>
 		<li><a href="">Portafoli</a></li>
 		<li><a href="">Contact</a></li>
 	</ul>
 	<div class="brand">
-		<h2>Daniel, <span>aldana</span></h2>
+		<h2>SEN<span>A</span></h2>
 	 </div>
 </nav>
 
@@ -21,6 +22,23 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		justify-content: space-between;
 		padding: 2em;
+		font-size: 20px;
+	}
+
+	.navbar i{
+		font-size: 2.5em;
+		color: #fff;
+		margin-top: -12px;
+	}
+
+	#icons-menu {
+		display: none;
+	}
+
+
+	.navbar span{
+		/* font-size: 2em; */
+		color: #fff;
 	}
 
 	.brand span {
@@ -36,12 +54,14 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		width: 40%;
 		justify-content: space-around;
+		margin-top: 10px;
 	}
 
 	.menu a{
 		border-radius: 20px;
 		color:  #fff;
 		padding: 10px 20px;
+		display: none;
 	}
 
 	.menu a:hover{
