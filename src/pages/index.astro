@@ -1,8 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Headers from '../layouts/Header.astro';
-// import Info from '../layouts/Info.astro';
-// import Profile from '../layouts/ProfileUser.astro';
+import Info from '../layouts/Info.astro';
+import Profile from '../layouts/ProfileUser.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,10 +13,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Headers />
-		<!-- <main>
+		<main>
 			<Info />
 			<Profile />
-		</main> -->
+		</main>
 		<!-- <main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -53,8 +53,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</body>
 </html>
 
-
-
 <style>
 	main{
 		margin: 0 auto;
@@ -62,6 +60,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		height: 80vh;
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
+		/* grid-column: 1/7; */
 		align-items: center;
 	}
+
+	@media screen and (max-width : 802px){
+      main{
+		display: flex;
+		flex-direction: column;
+	  }
+	}
+
+    
+
 </style>

@@ -1,11 +1,11 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE } from "../consts";
 ---
 
 <nav class="navbar">
-	<i class='bx bx-menu' id="icons-menu"></i>
+	<i class="bx bx-menu" id="icons-menu"></i>
 	<ul class="menu">
-	<i class='bx bxs-face'></i>
+		<i class="bx bxs-face"></i>
 		<li><a href="">Home</a></li>
 		<li><a href="">About me</a></li>
 		<li><a href="">Portafoli</a></li>
@@ -13,19 +13,18 @@ import { SITE_TITLE } from '../consts';
 	</ul>
 	<div class="brand">
 		<h2>SEN<span>A</span></h2>
-	 </div>
+	</div>
 </nav>
 
 <style>
-
-	.navbar{
+	.navbar {
 		display: flex;
 		justify-content: space-between;
 		padding: 2em;
 		font-size: 20px;
 	}
 
-	.navbar i{
+	.navbar i {
 		font-size: 2.5em;
 		color: #fff;
 		margin-top: -12px;
@@ -35,14 +34,13 @@ import { SITE_TITLE } from '../consts';
 		display: none;
 	}
 
-
-	.navbar span{
+	.navbar span {
 		/* font-size: 2em; */
 		color: #fff;
 	}
 
 	.brand span {
-      color: #FF0000;
+		color: #ff0000;
 	}
 
 	.brand {
@@ -50,25 +48,60 @@ import { SITE_TITLE } from '../consts';
 		width: 15%;
 	}
 
-	.menu{
+	.menu {
 		display: flex;
-		width: 40%;
+		width: 60%;
 		justify-content: space-around;
 		margin-top: 10px;
 	}
 
-	.menu a{
+	.menu a {
 		border-radius: 20px;
-		color:  #fff;
-		padding: 10px 20px;
-		display: none;
-	}
-
-	.menu a:hover{
-		border-radius: 20px;
-		background-color: #FF0000;
 		color: #fff;
-		transition:  ease-in .4s;
+		padding: 10px 20px;
+		/* display: none; */
 	}
 
+	.menu a:hover {
+		border-radius: 20px;
+		background-color: #ff0000;
+		color: #fff;
+		transition: ease-in 0.4s;
+	}
+
+	@media screen and (max-width: 739px) {
+		.menu a {
+			border-radius: 20px;
+			color: #fff;
+			padding: 10px 20px;
+			display: none;
+		}
+
+		#icons-menu {
+			display: block;
+		}
+
+		.menu i {
+			display: none;
+		}
+
+		.brand {
+			color: #fff;
+			width: 20%;
+		}
+	}
+
+	@media screen and (max-width: 1102px) {
+		.menu {
+			width: 70%;
+		}
+
+		.menu a {
+			border-radius: 20px;
+			color: #fff;
+			padding: 10px 15px;
+			font-size: 15px;
+		}
+	}
+	/* 1406 */
 </style>
